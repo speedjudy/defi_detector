@@ -1,0 +1,130 @@
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+.phcols {
+    display: flex;
+    flex-direction: row;
+    border-width: 10px 10px 0 10px;
+    border-style: solid;
+    border-color: transparent;
+    padding: 10px;
+    height: 150px;
+}
+
+.phcol {
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #03456e;
+    padding: 8px 10px 15px;
+    border-radius: 5px;
+    margin-left: 10px;
+    align-items: start;
+    min-width: 300px;
+}
+
+.phcol.title a, .phcol.title_mobile a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 11pt;
+    border: 0;
+    border-radius: 5px;
+    padding: 3px 10px 3px 6px;
+    /* background-color: #003759; */
+    color: #ddd;
+    margin-bottom: 5px;
+}
+
+.phcol.title a svg, .phcol.title_mobile a svg {
+    position: relative;
+    top: 1px;
+    fill: #efb90a;
+    transition: all .1s ease-in;
+}
+
+.phcol.title a span, .phcol.title_mobile a span {
+    display: block;
+    margin-left: 5px;
+}
+
+.phcol.title ul, .phcol.title_mobile ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0 40px 8px;
+}
+
+.phcol.title button, .phcol.title_mobile button {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 9pt;
+}
+
+.partnership_mobile, .partnership_parent{
+    display: none !important;
+}
+
+.phcol .title1{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.social {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social a img {
+    width: 20px;
+    height: 20px;
+}
+
+@media (min-width: 992px) {
+    .phcol.title ul {
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 13px;
+    }
+}
+
+@media only screen and (max-width: 1390px) {
+    .partnership {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .partnership_mobile, .partnership_parent {
+        display: flex !important;
+    }
+    .partnership_self, .partnership_self .phcols {
+        display: inline !important;
+    }
+    .partnership_self .phcols .phcol {
+        margin-left: 0px;
+    }
+    .promotion {
+        display: none;
+    }
+    
+    .phcol .title1{
+        font-size: 20px;
+        font-weight: bold;
+        padding: 15px 0px 5px 0px;
+    }
+    .social a img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+.phcol.title li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
